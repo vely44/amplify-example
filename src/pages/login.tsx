@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 
 const Login: NextPage = () => {
   return (
@@ -32,6 +33,13 @@ const Login: NextPage = () => {
               Login
             </button>
           </form>
+          <div className="mt-4">
+            <Link href="/">
+              <a className="text-[#e74c3c] font-semibold text-lg hover:underline">
+                Return to Homepage
+              </a>
+            </Link>
+          </div>
         </div>
       </main>
     </>
