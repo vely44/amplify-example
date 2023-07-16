@@ -18,17 +18,19 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="flex justify-end p-4">
-        <Link href="/login">
-          <button className="text-white text-lg font-semibold bg-[#3498db] rounded-md px-4 py-2 mr-2">
-            Login
-          </button>
-        </Link>
-        <Link href="/register">
-          <button className="text-white text-lg font-semibold bg-[#f39c12] rounded-md px-4 py-2">
-            Register
-          </button>
-        </Link>
+      <header>
+        <div className="flex justify-end">
+          <Link href="/login">
+            <button className="text-white text-lg font-semibold bg-[#e74c3c] rounded-md px-4 py-2 mr-2">
+              Login
+            </button>
+          </Link>
+          <Link href="/register">
+            <button className="text-white text-lg font-semibold bg-[#e74c3c] rounded-md px-4 py-2">
+              Register
+            </button>
+          </Link>
+        </div>
       </header>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#1a1a1a] to-[#444444]">
         <div className="container main-content flex flex-col items-center justify-center gap-12 px-4 py-16 ">
@@ -75,8 +77,7 @@ const Home: NextPage = () => {
           {showDescription && (
             <p className="text-2xl text-white loading-text">
               Welcome to Z Gen App, where socialization and multiplayer gaming blend
-              together to create an unforgettable experience inspired by "GTA San
-              Andreas Multiplayer."
+              together to create an unforgettable experience inspired by Roleplay Gaming.
               <br />
               <br />
               In Z Gen App, you can connect with friends and players from around the
