@@ -11,92 +11,79 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>RideShareX - Your Reliable Ridesharing Service</title>
+        <title>Z Gen Social Multiplayer App</title>
         <meta
           name="description"
-          content="RideShareX - Your reliable and convenient ridesharing service. Book a ride now!"
+          content="Z Gen App - Connect, socialize, and play multiplayer games like never before!"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#3498db] to-[#2980b9]">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#1a1a1a] to-[#444444]">
         <div className="container main-content flex flex-col items-center justify-center gap-12 px-4 py-16 ">
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            Welcome to <span className="text-[#27ae60]">RideShareX</span>
+            Welcome to <span className="text-[#e74c3c]">Z Gen App</span>
           </h1>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
             <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#2ecc71]/10 p-4"
-              href="https://www.ridesharex.com/book-ride"
-              target="_blank"
+              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#3498db]/10 p-4"
+              href="/connect"
             >
-              <h3 className="text-2xl font-bold text-[#2ecc71]">Book a Ride →</h3>
+              <h3 className="text-2xl font-bold text-[#3498db]">Connect →</h3>
               <div className="text-lg text-white">
-                Need a ride? Book now and enjoy our reliable and comfortable
-                ridesharing service.
+                Connect with friends and players from around the world. Socialize and
+                make new friends in an immersive online environment.
               </div>
             </Link>
             <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#f1c40f]/10 p-4"
-              href="https://www.ridesharex.com/become-driver"
-              target="_blank"
+              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#f39c12]/10 p-4"
+              href="/multiplayer"
             >
-              <h3 className="text-2xl font-bold text-[#f1c40f]">Become a Driver →</h3>
+              <h3 className="text-2xl font-bold text-[#f39c12]">Multiplayer →</h3>
               <div className="text-lg text-white">
-                Want to earn money driving with us? Join our team of drivers and
-                start earning today.
+                Dive into the world of multiplayer gaming. Team up with others or
+                compete against players in action-packed adventures.
               </div>
             </Link>
             <button
-              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#e74c3c]/10 p-4"
+              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#2ecc71]/10 p-4"
               onClick={() => setShowDescription(!showDescription)}
             >
-              <h3 className="text-2xl font-bold text-[#e74c3c]">Description →</h3>
+              <h3 className="text-2xl font-bold text-[#2ecc71]">Description →</h3>
             </button>
             <Link
               className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#9b59b6]/10 p-4"
-              href="tel:+1234567890"
+              href="/support"
             >
-              <h3 className="text-2xl font-bold text-[#9b59b6]">Call us →</h3>
+              <h3 className="text-2xl font-bold text-[#9b59b6]">Support →</h3>
               <div className="text-lg text-white">
-                Need assistance? Call us at +1 (234) 567-890.
+                Need assistance or have questions? Our support team is here to help you.
               </div>
             </Link>
           </div>
           {showDescription && (
             <p className="text-2xl text-white loading-text">
-              As a ridesharing driver, navigating through traffic is crucial to
-              providing a pleasant experience for your passengers. Here are some
-              tips to be a good ridesharing driver in traffic:
+              Welcome to Z Gen App, where socialization and multiplayer gaming blend
+              together to create an unforgettable experience inspired by "GTA San
+              Andreas Multiplayer."
               <br />
               <br />
-              1. Plan Your Routes: Familiarize yourself with common routes and
-              traffic patterns. Use navigation apps to find the best routes to
-              avoid congestion.
+              In Z Gen App, you can connect with friends and players from around the
+              globe in an immersive online world. Make new friends, form alliances, and
+              embark on thrilling adventures together.
               <br />
               <br />
-              2. Stay Calm and Patient: Traffic can be frustrating, but staying
-              calm and patient is essential. Avoid aggressive driving and road
-              rage.
+              Get ready to dive into the world of multiplayer gaming. Whether you enjoy
+              cooperative missions or competitive challenges, Z Gen App has something
+              for everyone. Battle rival gangs, engage in high-speed pursuits, and
+              explore vast open-world environments together.
               <br />
               <br />
-              3. Follow Traffic Laws: Obey all traffic laws, including speed
-              limits and traffic signals, for everyone's safety.
-              <br />
-              <br />
-              4. Maintain Safe Following Distance: Keep a safe distance from the
-              vehicle in front of you to allow for sudden stops.
-              <br />
-              <br />
-              5. Be Courteous to Other Drivers: Use your indicators, give way
-              when necessary, and be respectful of other drivers on the road.
-              <br />
-              <br />
-              6. Monitor Weather Conditions: Adjust your driving behavior based
-              on weather conditions to ensure safety.
+              The action never stops, and the possibilities are endless. Join Z Gen App
+              today and experience socialization and multiplayer like never before.
             </p>
           )}
           <p className="text-2xl text-white loading-text">
-            {hello.data ? hello.data.greeting : "Loading RideShareX query..."}
+            {hello.data ? hello.data.greeting : "Loading Z Gen App query..."}
           </p>
         </div>
       </main>
