@@ -18,15 +18,15 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="bg-transparent">
-        <div className="flex justify-end">
+      <header className="bg-gradient-to-b from-[#1a1a1a] to-[#444444]">
+        <div className="flex justify-end px-4 py-2">
           <Link href="/login">
-            <button className="text-white text-lg font-semibold rounded-md px-4 py-2 mr-2 border border-white">
+            <button className="text-white text-lg font-semibold rounded-md px-4 py-2 mr-2 border border-white bg-[#2e2e2e] hover:bg-[#484848]">
               Login
             </button>
           </Link>
           <Link href="/register">
-            <button className="text-white text-lg font-semibold rounded-md px-4 py-2 border border-white">
+            <button className="text-white text-lg font-semibold rounded-md px-4 py-2 border border-white bg-[#2e2e2e] hover:bg-[#484848]">
               Register
             </button>
           </Link>
@@ -39,36 +39,36 @@ const Home: NextPage = () => {
           </h1>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
             <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#3498db]/10 p-4"
+              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#2e2e2e] hover:bg-[#484848]/10 p-4"
               href="/connect"
             >
-              <h3 className="text-2xl font-bold text-[#3498db]">Connect →</h3>
+              <h3 className="text-2xl font-bold text-[#e74c3c]">Connect →</h3>
               <div className="text-lg text-white">
                 Connect with friends and players from around the world. Socialize and
                 make new friends in an immersive online environment.
               </div>
             </Link>
             <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#f39c12]/10 p-4"
+              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#2e2e2e] hover:bg-[#484848]/10 p-4"
               href="/multiplayer"
             >
-              <h3 className="text-2xl font-bold text-[#f39c12]">Multiplayer →</h3>
+              <h3 className="text-2xl font-bold text-[#e74c3c]">Multiplayer →</h3>
               <div className="text-lg text-white">
                 Dive into the world of multiplayer gaming. Team up with others or
                 compete against players in action-packed adventures.
               </div>
             </Link>
             <button
-              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#2ecc71]/10 p-4"
+              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#2e2e2e] hover:bg-[#484848]/10 p-4"
               onClick={() => setShowDescription(!showDescription)}
             >
-              <h3 className="text-2xl font-bold text-[#2ecc71]">Description →</h3>
+              <h3 className="text-2xl font-bold text-[#e74c3c]">Description →</h3>
             </button>
             <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#9b59b6]/10 p-4"
+              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#2e2e2e] hover:bg-[#484848]/10 p-4"
               href="/support"
             >
-              <h3 className="text-2xl font-bold text-[#9b59b6]">Support →</h3>
+              <h3 className="text-2xl font-bold text-[#e74c3c]">Support →</h3>
               <div className="text-lg text-white">
                 Need assistance or have questions? Our support team is here to help you.
               </div>
