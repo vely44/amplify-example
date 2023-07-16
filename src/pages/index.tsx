@@ -64,9 +64,40 @@ const Home: NextPage = () => {
           </div>
           {showDescription && (
             <p className="text-2xl text-white loading-text">
-              Hello world asggf dsdfr dffiyij ldoe dmee oogtkgm oeornvut iaddfff ertgib
+              As a ridesharing driver, navigating through traffic is crucial to
+              providing a pleasant experience for your passengers. Here are some
+              tips to be a good ridesharing driver in traffic:
+              <br />
+              <br />
+              1. Plan Your Routes: Familiarize yourself with common routes and
+              traffic patterns. Use navigation apps to find the best routes to
+              avoid congestion.
+              <br />
+              <br />
+              2. Stay Calm and Patient: Traffic can be frustrating, but staying
+              calm and patient is essential. Avoid aggressive driving and road
+              rage.
+              <br />
+              <br />
+              3. Follow Traffic Laws: Obey all traffic laws, including speed
+              limits and traffic signals, for everyone's safety.
+              <br />
+              <br />
+              4. Maintain Safe Following Distance: Keep a safe distance from the
+              vehicle in front of you to allow for sudden stops.
+              <br />
+              <br />
+              5. Be Courteous to Other Drivers: Use your indicators, give way
+              when necessary, and be respectful of other drivers on the road.
+              <br />
+              <br />
+              6. Monitor Weather Conditions: Adjust your driving behavior based
+              on weather conditions to ensure safety.
             </p>
           )}
+          <p className="text-2xl text-white loading-text">
+            {hello.data ? hello.data.greeting : "Loading RideShareX query..."}
+          </p>
         </div>
       </main>
     </>
