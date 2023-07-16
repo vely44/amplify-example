@@ -56,6 +56,13 @@ const Register: NextPage = () => {
               <a className="text-[#e74c3c]">Login here</a>
             </Link>
           </p>
+          <div className="mt-4">
+            <Link href="/">
+              <a className="text-[#e74c3c] font-semibold text-lg hover:underline">
+                Return to Homepage
+              </a>
+            </Link>
+          </div>
         </div>
       </main>
     </>
