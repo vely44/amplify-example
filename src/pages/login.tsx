@@ -32,27 +32,6 @@ const Login: NextPage = () => {
               Login
             </button>
           </form>
-          <div className="w-full max-w-md">
-            <hr className="border-t border-[#8c8c8c]" />
-          </div>
-          <form className="flex flex-col gap-4 max-w-md w-full">
-            <input
-              type="text"
-              className="rounded-md px-4 py-2 bg-[#2e2e2e] text-white placeholder-[#8c8c8c] focus:outline-none"
-              placeholder="Username"
-            />
-            <input
-              type="password"
-              className="rounded-md px-4 py-2 bg-[#2e2e2e] text-white placeholder-[#8c8c8c] focus:outline-none"
-              placeholder="Password"
-            />
-            <button
-              type="submit"
-              className="bg-[#e74c3c] text-white text-lg font-semibold rounded-md px-4 py-2 hover:bg-[#c0392b] focus:outline-none"
-            >
-              Login
-            </button>
-          </form>
         </div>
       </main>
     </>
