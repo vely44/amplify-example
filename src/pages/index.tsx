@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -5,6 +6,7 @@ import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  const [showDescription, setShowDescription] = useState(false);
 
   return (
     <>
@@ -44,10 +46,27 @@ const Home: NextPage = () => {
                 start earning today.
               </div>
             </Link>
+            <button
+              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#e74c3c]/10 p-4"
+              onClick={() => setShowDescription(!showDescription)}
+            >
+              <h3 className="text-2xl font-bold text-[#e74c3c]">Description →</h3>
+            </button>
+            <Link
+              className="flex max-w-xs flex-col gap-4 rounded-xl link-card bg-[#9b59b6]/10 p-4"
+              href="tel:+1234567890"
+            >
+              <h3 className="text-2xl font-bold text-[#9b59b6]">Call us →</h3>
+              <div className="text-lg text-white">
+                Need assistance? Call us at +1 (234) 567-890.
+              </div>
+            </Link>
           </div>
-          <p className="text-2xl text-white loading-text">
-            {hello.data ? hello.data.greeting : "Loading RideShareX query..."}
-          </p>
+          {showDescription && (
+            <p className="text-2xl text-white loading-text">
+              Hello world asggf dsdfr dffiyij ldoe dmee oogtkgm oeornvut iaddfff ertgib
+            </p>
+          )}
         </div>
       </main>
     </>
