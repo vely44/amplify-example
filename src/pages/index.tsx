@@ -18,15 +18,15 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
+      <header className="bg-transparent">
         <div className="flex justify-end">
           <Link href="/login">
-            <button className="text-white text-lg font-semibold bg-[#e74c3c] rounded-md px-4 py-2 mr-2">
+            <button className="text-white text-lg font-semibold rounded-md px-4 py-2 mr-2 border border-white">
               Login
             </button>
           </Link>
           <Link href="/register">
-            <button className="text-white text-lg font-semibold bg-[#e74c3c] rounded-md px-4 py-2">
+            <button className="text-white text-lg font-semibold rounded-md px-4 py-2 border border-white">
               Register
             </button>
           </Link>
