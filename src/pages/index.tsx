@@ -18,6 +18,18 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <header className="flex justify-end p-4">
+        <Link href="/login">
+          <button className="text-white text-lg font-semibold bg-[#3498db] rounded-md px-4 py-2 mr-2">
+            Login
+          </button>
+        </Link>
+        <Link href="/register">
+          <button className="text-white text-lg font-semibold bg-[#f39c12] rounded-md px-4 py-2">
+            Register
+          </button>
+        </Link>
+      </header>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#1a1a1a] to-[#444444]">
         <div className="container main-content flex flex-col items-center justify-center gap-12 px-4 py-16 ">
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
