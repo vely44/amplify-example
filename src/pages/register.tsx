@@ -6,7 +6,7 @@ const Register: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Register | Z Gen App</title>
+        <title>Register | Iasi App</title>
         <meta name="description" content="Register for Z Gen App" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
