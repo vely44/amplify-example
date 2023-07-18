@@ -3,11 +3,13 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import { Auth } from "aws-amplify"; // Import Amplify's Auth module
+import { useRouter } from "next/router"; // Import Next.js router
 
 const Login: NextPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const router = useRouter(); // Initialize the router
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,10 +18,14 @@ const Login: NextPage = () => {
       // Sign in with Amplify Auth
       await Auth.signIn(username, password);
       setMessage("Login successful!");
+      // Redirect the user to /userdashboard on successful login
+      router.push("/userdashboard");
     } catch (error) {
       setMessage("Login failed: " + error.message);
     }
   };
+
+
 
   return (
     <>
