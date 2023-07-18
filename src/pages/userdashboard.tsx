@@ -49,7 +49,7 @@ const Dashboard: NextPage = () => {
             <h3 className="text-lg font-semibold mb-4">Main Dashboard Content</h3>
             <p>
               Add your main dashboard content here, such as user statistics, recent activity,
-              notifications, or any other relevant information.
+              notifications, or any other relevant information...
             </p>
           </div>
         </div>
