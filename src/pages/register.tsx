@@ -31,7 +31,8 @@ const Register: NextPage = () => {
       });
       setMessage("Registration successful! Check your email for verification.");
     } catch (error) {
-      setMessage("Registration failed: " + error.message);
+      // Perform a type assertion to handle the 'error' variable correctly
+      setMessage("Registration failed: " + (error as Error).message);
     }
   };
 
