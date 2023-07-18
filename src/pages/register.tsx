@@ -1,8 +1,40 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { useState } from "react";
+import { Auth } from "aws-amplify"; // Import Amplify's Auth module
 
 const Register: NextPage = () => {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSignUp = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Add validation to check if passwords match
+    if (password !== confirmPassword) {
+      setMessage("Passwords do not match.");
+      return;
+    }
+
+    try {
+      // Sign up with Amplify Auth
+      await Auth.signUp({
+        username,
+        password,
+        attributes: {
+          email,
+        },
+      });
+      setMessage("Registration successful! Check your email for verification.");
+    } catch (error) {
+      setMessage("Registration failed: " + error.message);
+    }
+  };
+
   return (
     <>
       <Head>
@@ -15,27 +47,35 @@ const Register: NextPage = () => {
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Register for <span className="text-[#e74c3c]">Z Gen App</span>
           </h1>
-          <form className="flex flex-col gap-4 max-w-md w-full">
+          <form className="flex flex-col gap-4 max-w-md w-full" onSubmit={handleSignUp}>
             <input
               type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               className="rounded-md px-4 py-2 bg-[#2e2e2e] text-white placeholder-[#8c8c8c] focus:outline-none"
               placeholder="Username"
               required
             />
             <input
               type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="rounded-md px-4 py-2 bg-[#2e2e2e] text-white placeholder-[#8c8c8c] focus:outline-none"
               placeholder="Password"
               required
             />
             <input
               type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
               className="rounded-md px-4 py-2 bg-[#2e2e2e] text-white placeholder-[#8c8c8c] focus:outline-none"
               placeholder="Confirm Password"
               required
             />
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="rounded-md px-4 py-2 bg-[#2e2e2e] text-white placeholder-[#8c8c8c] focus:outline-none"
               placeholder="Email Address"
               required
@@ -47,6 +87,7 @@ const Register: NextPage = () => {
               Register
             </button>
           </form>
+          {message && <p className="text-white">{message}</p>}
           <div className="w-full max-w-md">
             <hr className="border-t border-[#8c8c8c]" />
           </div>
