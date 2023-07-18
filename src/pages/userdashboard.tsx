@@ -23,7 +23,7 @@ const Dashboard: NextPage = () => {
       </header>
       <main className="bg-gradient-to-b from-[#1a1a1a] to-[#444444]">
         <div className="container py-8 px-8">
-          <div className="grid grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div className="bg-[#2e2e2e] rounded-md p-6 text-white">
               <h3 className="text-lg font-semibold mb-4">Credits: 1000</h3>
               <h3 className="text-lg font-semibold mb-4">Properties:</h3>
@@ -45,6 +45,13 @@ const Dashboard: NextPage = () => {
             </div>
           </div>
           {/* Add the main dashboard content here */}
+          <div className="bg-[#2e2e2e] rounded-md p-6 text-white mb-8">
+            <h3 className="text-lg font-semibold mb-4">Main Dashboard Content</h3>
+            <p>
+              Add your main dashboard content here, such as user statistics, recent activity,
+              notifications, or any other relevant information.
+            </p>
+          </div>
         </div>
       </main>
     </>
