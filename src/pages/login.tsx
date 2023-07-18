@@ -21,11 +21,10 @@ const Login: NextPage = () => {
       // Redirect the user to /userdashboard on successful login
       router.push("/userdashboard");
     } catch (error) {
-      setMessage("Login failed: " + error.message);
+      // Perform a type assertion to handle the 'error' variable correctly
+      setMessage("Login failed: " + (error as Error).message);
     }
   };
-
-
 
   return (
     <>
