@@ -87,4 +87,33 @@ const HomePage: NextPage = () => {
           </div>
           <div className="max-w-xl p-4 rounded-xl bg-gray-800">
             <h2 className="text-3xl font-bold text-white mt-16">Why Choose Our Itinerary Service?</h2>
-            <ul className="list-disc list-inside text-white
+            <ul className="list-disc list-inside text-white text-lg mt-4">
+              <li>Streamlined Planning: Centralize all travel-related information in one place.</li>
+              <li>Organization: Keep track of your travel plans, reservations, and important details conveniently.</li>
+              <li>Flexibility: Easily modify and adjust your itinerary based on changing preferences or unexpected events.</li>
+              <li>Time Savings: Save time and effort by automating the process of compiling travel plans.</li>
+              <li>Collaboration: Share itineraries with travel companions, enabling seamless coordination during your trip.</li>
+            </ul>
+          </div>
+          <div className="max-w-xl p-4 rounded-xl bg-gray-800">
+            <h2 className="text-3xl font-bold text-white mt-16">Personalization and Recommendations</h2>
+            <ul className="list-disc list-inside text-white text-lg mt-4">
+              <li>Personalized Recommendations: Receive activity and attraction suggestions tailored to your preferences.</li>
+              <li>Weather Integration: Stay weather-ready with forecasts for each day of your trip.</li>
+              <li>Time Optimization: Optimize your itinerary for efficient travel between locations.</li>
+            </ul>
+          </div>
+          <div className="max-w-xl p-4 rounded-xl bg-gray-800">
+            <h2 className="text-3xl font-bold text-white mt-16">Integration with Other Services</h2>
+            <ul className="list-disc list-inside text-white text-lg mt-4">
+              <li>Booking Integration: Seamlessly add bookings for flights, accommodations, and activities to your itinerary.</li>
+              <li>Location and Navigation: Access maps, directions, and proximity alerts for planned activities and attractions.</li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+};
+
+export default HomePage;
